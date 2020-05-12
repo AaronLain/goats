@@ -3,6 +3,12 @@ import React from 'react';
 import './Goat.scss';
 
 class Goat extends React.Component {
+  useGoatEvent = (e) => {
+    const { goat, useAGoat } = this.props;
+    e.preventDefault();
+    useAGoat(goat.id);
+  }
+
   render() {
     const { goat } = this.props;
 
@@ -14,7 +20,9 @@ class Goat extends React.Component {
             <h5 className="card-title">{goat.name}</h5>
             <p className="card-text">Beard Length: {goat.beardLength}</p>
             <p className="card-text">Color: {goat.color}</p>
-            <p className="card-text">Are They Busy?: {goat.isBusy}</p>
+            <div className="card-footer">
+              <button className="btn btn-warning" onClick={this.useGoatEvent}>Use this Goat!</button>
+            </div>
           </div>
         </div>
       </div>
