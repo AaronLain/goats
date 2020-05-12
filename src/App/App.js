@@ -19,6 +19,12 @@ class App extends React.Component {
     this.setState({ goats });
   }
 
+  freeAGoat = (goatId) => {
+    goatData.freeGoat(goatId);
+    const goats = goatData.getGoats();
+    this.setState({ goats });
+  }
+
   render() {
     const { goats } = this.state;
 
@@ -26,7 +32,7 @@ class App extends React.Component {
       <div className="App">
         <h2>HELLO THERE</h2>
         <button className="btn btn-info">DING DONG</button>
-        <GoatCoral goats={goats} useAGoat={this.useAGoat}/>
+        <GoatCoral goats={goats} useAGoat={this.useAGoat} freeAGoat={this.freeAGoat}/>
       </div>
     );
   }
