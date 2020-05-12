@@ -28,7 +28,7 @@ const goats = [
     isBusy: false,
     beardLength: 'medium',
     isFainter: false,
-    imageUrl: 'https://i0.wp.com/www.gardeningknowhow.com/wp-content/uploads/2010/02/iStock-524907632.jpg?fit=1600%2C1315&ssl=1',
+    imageUrl: 'https://i0.wp.com/www.gardeningknowhow.com/wp-content/uploads/2010/02/iStock-524907632.jpg',
     age: 906,
     id: 'goat3',
   },

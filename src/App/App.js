@@ -13,13 +13,6 @@ class App extends React.Component {
     this.setState({ goats });
   }
 
-  goatBuilder() {
-    const goats = goatData.getGoats();
-    goats.forEach((goat) => {
-      console.error(goat);
-    });
-  }
-
   render() {
     return (
       <div className="App">
