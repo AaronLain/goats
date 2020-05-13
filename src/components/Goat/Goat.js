@@ -1,8 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import goatShape from '../../helpers/propz/goatShape';
 
 import './Goat.scss';
 
 class Goat extends React.Component {
+  static propTypes = {
+    goat: goatShape.goatShape,
+    useAGoat: PropTypes.func.isRequired,
+    freeAGoat: PropTypes.func.isRequired,
+  }
+
   useGoatEvent = (e) => {
     const { goat, useAGoat } = this.props;
     e.preventDefault();
